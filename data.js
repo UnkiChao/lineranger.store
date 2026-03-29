@@ -1,6 +1,97 @@
 const accountDatabase = 
 [
-   
+   { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R11"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R11",
+                "name": "狂徒部長"
+        }
+]
+},
+{ 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R03"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R03",
+                "name": "主唱熊大"
+        }
+]
+},
+{ 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R02","R11","R14"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R02",
+                "name": "小紅"
+        },
+        {
+                "id": "R11",
+                "name": "狂徒部長"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
+        }
+]
+},
+{ 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R11","R17","R28"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R11",
+                "name": "狂徒部長"
+        },
+        {
+                "id": "R17",
+                "name": "信件郵差噗噗"
+        },
+        {
+                "id": "R28",
+                "name": "籌碼賭徒兔兔"
+        }
+]
+},
+{ 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R19"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R19",
+                "name": "約兒"
+        }
+]
+},
+
 
 ];
 
