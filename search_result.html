@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>查詢結果</title>
+    <style>
+        body { font-family: 'PingFang TC', sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 15px; padding-bottom: 50px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; color: #ffcf00; font-size: 22px; }
+        
+        .search-summary { background: #161b22; padding: 12px; border-radius: 8px; border: 1px solid #30363d; margin-bottom: 20px; font-size: 13px; word-break: break-all; }
+        .search-summary span { color: #ffcf00; font-weight: bold; }
+
+        .result-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 15px; margin-bottom: 15px; transition: 0.2s; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        
+        .acc-no-tag { font-family: monospace; font-size: 14px; color: #8b949e; }
+        .copy-btn { background: #30363d; color: #ffcf00; border: 1px solid #444; padding: 4px 10px; border-radius: 5px; font-size: 12px; cursor: pointer; margin-left: 5px; }
+        
+        .price { font-size: 24px; color: #f2994a; font-weight: bold; }
+        .match-badge { background: #ffcf00; color: #000; font-size: 11px; font-weight: bold; padding: 2px 10px; border-radius: 20px; margin-top: 5px; display: inline-block; }
+
+        .mini-role-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
+        .mini-card { width: 55px; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; text-align: center; }
+        .mini-card.hit { border-color: #ffcf00; box-shadow: 0 0 8px rgba(255,207,0,0.3); }
+        .mini-card img { width: 100%; height: 45px; object-fit: contain; padding: 5px; }
+        .mini-name { font-size: 9px; color: #8b949e; background: #161b22; padding: 2px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .mini-card.hit .mini-name { color: #ffcf00; }
+
+        .btn-link { display: block; background: #238636; color: white; text-align: center; text-decoration: none; padding: 14px; border-radius: 10px; font-weight: bold; font-size: 16px; }
+
+        .back-link { text-align: center; margin-top: 30px; }
+        .back-link a { color: #ffcf00; text-decoration: none; font-size: 14px; }
+
+        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #238636; color: white; padding: 10px 20px; border-radius: 8px; display: none; z-index: 10000; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="toast"></div>
+    <div class="container">
+        <h1>查詢結果</h1>
+        <div id="search-summary" class="search-summary">分析中...</div>
+        <div id="results-list"></div>
+        <div class="back-link"><a href="index.html">← 返回重新選擇</a></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        function showToast(msg, color = "#238636") {
+            const t = document.getElementById('toast');
+            t.innerText = msg; t.style.background = color;
+            t.style.display = 'block';
+            setTimeout(() => t.style.display = 'none', 1500);
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const selectedTags = params.get('tags') ? params.get('tags').split(',') : [];
+        const list = document.getElementById('results-list');
+
+        if (selectedTags.length === 0) {
+            document.getElementById('search-summary').innerText = "未選擇標籤";
+        } else {
+            document.getElementById('search-summary').innerHTML = `篩選條件：<span>${selectedTags.map(id => roleMap[id]).join(', ')}</span>`;
+            
+            let filtered = accountDatabase.map(acc => ({
+                ...acc,
+                hitCount: selectedTags.filter(t => acc.roles.includes(t)).length
+            })).filter(acc => acc.hitCount > 0).sort((a,b) => b.hitCount - a.hitCount);
+
+            filtered.forEach(acc => {
+                const card = document.createElement('div');
+                card.className = 'result-card';
+                const rolesHTML = acc.roles_detail.map(r => `
+                    <div class="mini-card ${selectedTags.includes(r.id) ? 'hit' : ''}">
+                        <img src="image/${r.id.startsWith('R')?'rangers':'equip'}/${r.name}.png" onerror="this.src='image/placeholder.png'">
+                        <div class="mini-name">${r.name}</div>
+                    </div>`).join('');
+
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div>
+                            <span class="acc-no-tag">ID: ${acc.acc_no}</span>
+                            <button class="copy-btn" onclick="navigator.clipboard.writeText('${acc.acc_no}').then(()=>showToast('已複製 ID'))">複製</button><br>
+                        </div>
+                        <div class="price">$${acc.price}</div>
+                    </div>
+                    <div class="mini-role-list">${rolesHTML}</div>
+                    <a href="${acc.link}" class="btn-link" target="_blank">前往賣場查看</a>`;
+                list.appendChild(card);
+            });
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === '\\') {
+                const details = selectedTags.map(id => ({ id, name: roleMap[id] }));
+                const code = `{ 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ${JSON.stringify(selectedTags)},
+    roles_detail: ${JSON.stringify(details, null, 8)}
+},\n`;
+                navigator.clipboard.writeText(code).then(() => showToast("Copied！", "#ffcf00"));
+            }
+        });
+    </script>
+</body>
+</html>
