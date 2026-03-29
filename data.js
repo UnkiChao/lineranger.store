@@ -1,28 +1,6 @@
 const accountDatabase = 
 [
-    {
-        acc_no: "ACC_001",
-        name: "",
-        price: "1500",
-        link: "https://www.google.com",
-        roles: ["R07", "R08", "E01"], // 篩選邏輯用
-        roles_detail: [
-            { id: "R07", name: "制服安妮亞" },
-            { id: "R08", name: "安妮亞" },
-            { id: "E01", name: "月光守護手套" }
-        ]
-    },
-    {
-        acc_no: "ACC_002",
-        name: "",
-        price: "300",
-        link: "https://www.google.com",
-        roles: ["R01", "E19"],
-        roles_detail: [
-            { id: "R01", name: "小小河童饅頭人" },
-            { id: "E19", name: "雷納德戒指" }
-        ]
-    }
+   
 
 ];
 
