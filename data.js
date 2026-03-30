@@ -3,6 +3,34 @@ const accountDatabase =
    { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R02","R03","R04","R05"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R02",
+                "name": "小紅"
+        },
+        {
+                "id": "R03",
+                "name": "主唱熊大"
+        },
+        {
+                "id": "R04",
+                "name": "尼古拉特斯拉"
+        },
+        {
+                "id": "R05",
+                "name": "白蘿蔔熊大"
+        }
+]
+},
+
+   { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
     roles: ["R01","R11"],
     roles_detail: [
         {
