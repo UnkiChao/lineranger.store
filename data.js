@@ -3,6 +3,62 @@ const accountDatabase =
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R03","R13","R15","R27"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R03",
+                "name": "主唱熊大"
+        },
+        {
+                "id": "R13",
+                "name": "始皇帝"
+        },
+        {
+                "id": "R15",
+                "name": "阿努比斯熊大"
+        },
+        {
+                "id": "R27",
+                "name": "路德"
+        }
+]
+},
+
+ { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R03","R14","R20","R31"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R03",
+                "name": "主唱熊大"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
+        },
+        {
+                "id": "R20",
+                "name": "恩琴"
+        },
+        {
+                "id": "R31",
+                "name": "劍客熊大"
+        }
+]
+},
+
+ { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
     roles: ["R01","R13","R14"],
     roles_detail: [
         {
