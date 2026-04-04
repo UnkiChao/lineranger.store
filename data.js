@@ -59,7 +59,7 @@ const accountDatabase =
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R13","R14"],
+    roles: ["R01","R13","R14","R14"],
     roles_detail: [
         {
                 "id": "R01",
