@@ -3,6 +3,74 @@ const accountDatabase =
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R13","R14"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R13",
+                "name": "始皇帝"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
+        }
+]
+},
+
+ { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R15","R17","R26"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R15",
+                "name": "阿努比斯熊大"
+        },
+        {
+                "id": "R17",
+                "name": "信件郵差噗噗"
+        },
+        {
+                "id": "R26",
+                "name": "菜鳥戰士熊大"
+        }
+]
+},
+
+ { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R29","E03"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R29",
+                "name": "黑帝斯"
+        },
+        {
+                "id": "E03",
+                "name": "月光輝斧"
+        }
+]
+},
+
+ { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
     roles: ["R01","R17","R28","R29"],
     roles_detail: [
         {
