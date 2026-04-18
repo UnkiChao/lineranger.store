@@ -171,19 +171,27 @@
         const eGrid = document.getElementById('equipGrid');
 
         // 生成卡片
-        Object.keys(roleMap).forEach(id => {
-            const name = roleMap[id];
-            const type = id.startsWith('R') ? 'rangers' : 'equip';
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.dataset.id = id;
-            card.innerHTML = `<img src="image/${type}/${name}.png" loading="lazy" onerror="this.src='image/placeholder.png'"><div class="name">${name}</div>`;
-            card.onclick = function() { 
-                this.classList.toggle('selected'); 
-                updateUI(); 
-            };
-            (id.startsWith('R') ? rGrid : eGrid).appendChild(card);
-        });
+        // 生成卡片 (加入自動排序：R01, R02... E01, E02...)
+        Object.keys(roleMap)
+            .sort((a, b) => {
+                // 先按開頭字母排 (R 在 E 前面)，再按數字排
+                if (a[0] !== b[0]) return b.localeCompare(a); 
+                return parseInt(a.substring(1)) - parseInt(b.substring(1));
+            })
+            .forEach(id => {
+                const name = roleMap[id];
+                const type = id.startsWith('R') ? 'rangers' : 'equip';
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.dataset.id = id;
+                // 這裡加上 loading="lazy" 效能會更好
+                card.innerHTML = `<img src="image/${type}/${name}.png" loading="lazy" onerror="this.src='image/placeholder.png'"><div class="name">${name}</div>`;
+                card.onclick = function() { 
+                    this.classList.toggle('selected'); 
+                    updateUI(); 
+                };
+                (id.startsWith('R') ? rGrid : eGrid).appendChild(card);
+            });
 
         function updateUI() {
             const selected = document.querySelectorAll('.card.selected');
