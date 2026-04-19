@@ -3,31 +3,7 @@ const accountDatabase =
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R14","R29","R34"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        },
-        {
-                "id": "R29",
-                "name": "黑帝斯"
-        },
-        {
-                "id": "R34",
-                "name": "魔法師的徒弟熊大"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03","R30","R34"],
+    roles: ["R01","R03","R14","R20","R31"],
     roles_detail: [
         {
                 "id": "R01",
@@ -38,168 +14,43 @@ const accountDatabase =
                 "name": "主唱熊大"
         },
         {
-                "id": "R30",
-                "name": "實習騎士熊大"
+                "id": "R14",
+                "name": "帕瓦"
         },
         {
-                "id": "R34",
-                "name": "魔法師的徒弟熊大"
-        }
+                "id": "R20",
+                "name": "恩琴"
+        },
+        {
+                "id": "R31",
+                "name": "劍客熊大"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
 ]
 },
 
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","R30"],
+    roles: ["R01","R13","R14"],
     roles_detail: [
         {
                 "id": "R01",
                 "name": "小小河童饅頭人"
         },
         {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R30",
-                "name": "實習騎士熊大"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R26","E23"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R26",
-                "name": "菜鳥戰士熊大"
-        },
-        {
-                "id": "E23",
-                "name": "雷納德的神奇炸彈"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","E01"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "E01",
-                "name": "月光守護手套"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","E02"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "E02",
-                "name": "月光沉眠匕首"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","R29"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R29",
-                "name": "黑帝斯"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R26","E03"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R26",
-                "name": "菜鳥戰士熊大"
-        },
-        {
-                "id": "E03",
-                "name": "月光輝斧"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03","R19"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R03",
-                "name": "主唱熊大"
-        },
-        {
-                "id": "R19",
-                "name": "約兒"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R14","R28"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
+                "id": "R13",
+                "name": "始皇帝"
         },
         {
                 "id": "R14",
                 "name": "帕瓦"
         },
         {
-                "id": "R28",
-                "name": "籌碼賭徒兔兔"
+                "id": "R14",
+                "name": "帕瓦"
         }
 ]
 },
@@ -223,23 +74,19 @@ const accountDatabase =
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R08","R26","R29"],
+    roles: ["R01","R17"],
     roles_detail: [
         {
                 "id": "R01",
                 "name": "小小河童饅頭人"
         },
         {
-                "id": "R08",
-                "name": "安妮亞"
+                "id": "R17",
+                "name": "信件郵差噗噗"
         },
         {
-                "id": "R26",
-                "name": "菜鳥戰士熊大"
-        },
-        {
-                "id": "R29",
-                "name": "黑帝斯"
+                "id": "R17",
+                "name": "信件郵差噗噗"
         }
 ]
 },
@@ -247,139 +94,11 @@ const accountDatabase =
  { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R08","R18","R29"],
+    roles: ["R01","R17","R26"],
     roles_detail: [
         {
                 "id": "R01",
                 "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R08",
-                "name": "安妮亞"
-        },
-        {
-                "id": "R18",
-                "name": "洛伊德"
-        },
-        {
-                "id": "R29",
-                "name": "黑帝斯"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","R14"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03","R13","R15","R27"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R03",
-                "name": "主唱熊大"
-        },
-        {
-                "id": "R13",
-                "name": "始皇帝"
-        },
-        {
-                "id": "R15",
-                "name": "阿努比斯熊大"
-        },
-        {
-                "id": "R27",
-                "name": "路德"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03","R14","R20","R31"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R03",
-                "name": "主唱熊大"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        },
-        {
-                "id": "R20",
-                "name": "恩琴"
-        },
-        {
-                "id": "R31",
-                "name": "劍客熊大"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R13","R14","R14"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R13",
-                "name": "始皇帝"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R15","R17","R26"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R15",
-                "name": "阿努比斯熊大"
         },
         {
                 "id": "R17",
@@ -388,6 +107,30 @@ const accountDatabase =
         {
                 "id": "R26",
                 "name": "菜鳥戰士熊大"
+        }
+]
+},
+
+ { 
+    acc_no: "ACC_" + Date.now(), 
+    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
+    roles: ["R01","R03","R14"],
+    roles_detail: [
+        {
+                "id": "R01",
+                "name": "小小河童饅頭人"
+        },
+        {
+                "id": "R03",
+                "name": "主唱熊大"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
+        },
+        {
+                "id": "R14",
+                "name": "帕瓦"
         }
 ]
 },
@@ -412,7 +155,7 @@ const accountDatabase =
 ]
 },
 
- { 
+{ 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
     roles: ["R01","R17","R28","R29"],
@@ -436,268 +179,6 @@ const accountDatabase =
 ]
 },
 
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R13"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R13",
-                "name": "始皇帝"
-        }
-]
-},
-
- { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        }
-]
-},
-
- 
-   { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R03",
-                "name": "主唱熊大"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R02","R11","R14"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R02",
-                "name": "小紅"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","R17","R28"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R17",
-                "name": "信件郵差噗噗"
-        },
-        {
-                "id": "R28",
-                "name": "籌碼賭徒兔兔"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R19"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R19",
-                "name": "約兒"
-        }
-]
-},
-   { 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R14","R26"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        },
-        {
-                "id": "R26",
-                "name": "菜鳥戰士熊大"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03","E01"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R03",
-                "name": "主唱熊大"
-        },
-        {
-                "id": "E01",
-                "name": "月光守護手套"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","R15","R28"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R15",
-                "name": "阿努比斯熊大"
-        },
-        {
-                "id": "R28",
-                "name": "籌碼賭徒兔兔"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R12","R26"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R12",
-                "name": "使者熊大"
-        },
-        {
-                "id": "R26",
-                "name": "菜鳥戰士熊大"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R08","R28","R29"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R08",
-                "name": "安妮亞"
-        },
-        {
-                "id": "R28",
-                "name": "籌碼賭徒兔兔"
-        },
-        {
-                "id": "R29",
-                "name": "黑帝斯"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R11","R13"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R11",
-                "name": "狂徒部長"
-        },
-        {
-                "id": "R13",
-                "name": "始皇帝"
-        }
-]
-},
-{ 
-    acc_no: "ACC_" + Date.now(), 
-    name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
-    roles: ["R01","R03","R14"],
-    roles_detail: [
-        {
-                "id": "R01",
-                "name": "小小河童饅頭人"
-        },
-        {
-                "id": "R03",
-                "name": "主唱熊大"
-        },
-        {
-                "id": "R14",
-                "name": "帕瓦"
-        }
-]
-},
 { 
     acc_no: "ACC_" + Date.now(), 
     name: "新帳號", price: "0", link: "https://www.8591.com.tw/v3/mall/detail/2417603835?aid=3005", 
